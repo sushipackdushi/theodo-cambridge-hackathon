@@ -1,4 +1,4 @@
-.App {
+.app {
   text-align: center;
 }
 
@@ -13,26 +13,19 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-body {
+  height: 100%;
 }
 
-.App-footer {
+.app-header {
   background-color: #282c34;
-  min-height: 100vh;
+  position: sticky;
+}
+
+.app-footer {
+  position: sticky;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #282c34;
 }
 
 .App-link {
