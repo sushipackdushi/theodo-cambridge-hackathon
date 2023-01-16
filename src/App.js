@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/molecules/Header/Header";
 import Footer from "./components/molecules/Footer/Footer";
 import { Rotate } from "react-animated-components";
+import NoughtsAndCrosses from "./components/molecules/NoughtsAndCrosses/NoughtsAndCrosses";
 
 const BoringPie = () => <span>🥧</span>;
 
@@ -28,6 +29,9 @@ function App() {
             <BoringPie />
           </Rotate>
         </h3>
+      </div>
+      <div>
+        <NoughtsAndCrosses />
       </div>
       <div className="app-footer">
         <Footer />
