@@ -17,13 +17,17 @@ export default function NoughtsAndCrosses() {
   const [winner, setWinner] = useState(null);
 
   function playTurn(squareIndex) {
-    var newGameState = [...gameState];
-    newGameState[squareIndex] = currentPlayer;
-    setGameState(newGameState);
-    if (currentPlayer === "X") {
-      setCurrentPlayer("O");
-    } else {
-      setCurrentPlayer("X");
+    if (winner === null) {
+      if (gameState[squareIndex] === null) {
+        var newGameState = [...gameState];
+        newGameState[squareIndex] = currentPlayer;
+        setGameState(newGameState);
+        if (currentPlayer === "X") {
+          setCurrentPlayer("O");
+        } else {
+          setCurrentPlayer("X");
+        }
+      }
     }
   }
   function checkLine(gameSquares) {
@@ -35,7 +39,7 @@ export default function NoughtsAndCrosses() {
     }
     return null;
   }
-  function checkforWinner() {
+  function checkForWinner() {
     const winningRows = [
       [0, 1, 2],
       [3, 4, 5],
@@ -56,16 +60,46 @@ export default function NoughtsAndCrosses() {
     return winningPlayer;
   }
 
+  function checkForDraw() {
+    var draw = true;
+    gameState.forEach((gameSquare) => {
+      if (gameSquare === null) {
+        draw = false;
+      }
+    });
+    return draw;
+  }
+
+  function displayGameText() {
+    if (winner === null) {
+      return "Current player: " + currentPlayer;
+    } else if (winner === "DRAW") {
+      return "It's a draw!";
+    } else {
+      return "Player " + winner + " wins!";
+    }
+  }
+
+  function resetGame() {
+    setGameState([null, null, null, null, null, null, null, null, null]);
+    setCurrentPlayer("X");
+    setWinner(null);
+  }
+
   useEffect(() => {
-    const possibleWinner = checkforWinner();
+    const possibleWinner = checkForWinner();
     if (possibleWinner !== null) {
       setWinner(possibleWinner);
+    } else {
+      const possibleDraw = checkForDraw();
+      if (possibleDraw === true) {
+        setWinner("DRAW");
+      }
     }
   }, [gameState]);
 
   return (
     <div className="boardContainer">
-      <div>Current player: {currentPlayer}</div>
       <div className="gameBoard">
         {gameState.map((squareValue, squareIndex) => {
           return (
@@ -81,7 +115,12 @@ export default function NoughtsAndCrosses() {
           );
         })}
       </div>
-      {winner !== null && <div>Player {winner} wins!</div>}
+      <div>{displayGameText()}</div>
+      <div>
+        <button type="button" onClick={resetGame}>
+          Reset Game
+        </button>
+      </div>
     </div>
   );
 }
