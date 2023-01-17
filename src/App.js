@@ -2,8 +2,9 @@ import "./App.css";
 import Header from "./components/molecules/Header/Header";
 import Footer from "./components/molecules/Footer/Footer";
 import { Rotate } from "react-animated-components";
+import NoughtsAndCrosses from "./components/molecules/NoughtsAndCrosses/NoughtsAndCrosses";
 
-const BoringPie = () => <span>🥧</span>;
+const BoringPie = () => <div>🥧</div>;
 
 function App() {
   return (
@@ -23,11 +24,17 @@ function App() {
         <h3>
           {" "}
           An example of an animated pie:{" "}
-          <Rotate>
-            {" "}
-            <BoringPie />
-          </Rotate>
+          <div>
+            <Rotate inline>
+              {" "}
+              <BoringPie />
+            </Rotate>
+          </div>
         </h3>
+      </div>
+      <div>
+        <h3>An example game of Noughts and Crosses:</h3>
+        <NoughtsAndCrosses />
       </div>
       <div className="app-footer">
         <Footer />
