@@ -1,4 +1,3 @@
-import React from "react";
 import "./Header.css";
 import Title from "../../atoms/Title/Title";
 
