@@ -5,15 +5,6 @@ This project was created with [Create React App](https://github.com/facebook/cre
 
 ## Setup
 - Install nvm
-    - In your terminal run `brew install nvm`
-        - If `command -v nvm` does not return `nvm` add
-        
-        `export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s` `"${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"`
-        `[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"`
-        to the ~./bashrc
-        
-    - run `nvm install 14` to get node 14
-    - **Check:** Run `which node` should output `/Users/<username>/.nvm/versions/node/<some node binary>`
 
 ## Available Scripts
 
