@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: space-between;
   font-size: 20px;
-  color: white;
   padding: 0px 30px;
 }
 
@@ -20,4 +19,8 @@
 
 .link:hover {
   color: white
+}
+
+.h1 {
+  color: white;
 }
