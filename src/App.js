@@ -5,23 +5,8 @@ import Home from "./pages/home";
 import Test from "./pages/test";
 import Theodo from "./pages/theodo";
 import { Routes, Route } from "react-router-dom";
-import {useState, useEffect} from "react"
 
 function App() {
-
-  // const [counter, setCounter] = useState(0);
-  // useEffect(() => {
-  //   setCounter(counter+1)
-  //   console.log(counter)
-  // }, []);
-
-  // const [counter, setCouter] = useState(0)
-
-  // function someFunction() {setCouter(1)};
-  // useEffect(() => {
-  //   someFunction();
-  //   console.log(counter);
-  // },[])
 
   return (
     <div className="app">

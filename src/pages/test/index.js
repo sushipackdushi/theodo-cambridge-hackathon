@@ -2,8 +2,8 @@ import {useState, useEffect} from 'react'
 const Test = () => {
 
 
-  const [counter, setCounter] = useState(0);
-  console.log(counter)
+  // const [counter, setCounter] = useState(0);
+  // console.log(counter)
 
   // useEffect(() => {
   //   setCounter(counter+1)
