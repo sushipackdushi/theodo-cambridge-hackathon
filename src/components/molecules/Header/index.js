@@ -11,7 +11,7 @@ export default function Header() {
       </div>
 
       <div className="header" >
-        <h1> JOHN CENA SNAKE GAME </h1>
+        <h1> 老大哥在看着你 (john cena snake game) </h1>
       </div>
 
       <div className="img2">
