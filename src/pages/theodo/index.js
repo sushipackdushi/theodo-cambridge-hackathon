@@ -1,7 +1,7 @@
 const Theodo = () => {
   return (
     <div>
-      <h1>Theodo Page</h1>
+      <h1>blank page innit</h1>
     </div>
   );
 };

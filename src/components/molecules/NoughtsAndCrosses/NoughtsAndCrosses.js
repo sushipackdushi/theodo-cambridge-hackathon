@@ -2,18 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./NoughtsAndCrosses.css";
 
 export default function NoughtsAndCrosses() {
-  // This represents the 3x3 grid - each item in the array corresponds to the symbol played in each of the 9 squares
-  const [gameState, setGameState] = useState([
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-  ]);
+  // This is meant to create the Snake Game board consisting of 100 squares.
+  const [gameState, setGameState] = useState(Array.from({length: 100}, (_, i) => 100-i));
+
   const [currentPlayer, setCurrentPlayer] = useState("X");
   const [winner, setWinner] = useState(null);
 
